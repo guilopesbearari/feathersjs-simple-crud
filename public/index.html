@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>A FeathersJS application</title>
+    <meta name="description" content="A FeathersJS server">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/core-js/2.1.4/core.min.js"></script>
+    <script src="//unpkg.com/@feathersjs/client@^4.5.0/dist/feathers.js"></script>
+    <script src="//unpkg.com/socket.io-client@^2.3.0/dist/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js" integrity="sha512-efUTj3HdSPwWJ9gjfGR71X9cvsrthIA78/Fvd/IN+fttQVy7XWkOAXb295j8B3cmm/kFKVxjiNYzKw9IQJHIuQ==" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="item1">
+        <h1 class="text-center"> CRUD de produtos </h1>
+      </div>
+      <div class="item2">
+        <form action="" method="post" id="form">
+          <div class="container">
+            <input type="hidden" id="id" name="id">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Nome</label>
+                <input type="text" class="form-control" id="name">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Descrição</label>
+                <input type="text" class="form-control" id="description">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Preço</label>
+                <input type="number" step="0.01" class="form-control" id="price">
+              </div>
+            </form>
+            <br>
+            <input class="btn btn-info" type="button" id="salvar" onClick="cadastrar()" value="Salvar"/>
+            <input class="btn btn-info" type="button" id="modificar" onClick="atualizar()" value="Modificar"/>
+          </div>
+        </form>
+      </div>
+      <div class="item3">
+        <div class="container">
+          <h3 class="text-center"> Lista de produtos </h3>
+          <table id="tabela" class="table table-striped table-hover" style="width: 100%;">
+            <thead class="thead-light">
+              <tr>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Valor</th>
+                <th>Ação</th>
+              </tr>
+            </thead>
+            <tbody> </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="item5">
+        <div class="container">Esse é um teste</div>
+      </div>
+    </div>
+  </body>
+  <script src="js/index.js"> </script>
+</html>
